@@ -8,6 +8,7 @@ import os
 
 PRODUCTS_PATH = "/home/mustar/catkin_ws/src/smart_shopping_bot/config/products_data.json"
 
+# Load product data
 if not os.path.exists(PRODUCTS_PATH):
     rospy.logerr(f"Product data file not found: {PRODUCTS_PATH}")
     PRODUCT_INFO = {}
@@ -55,7 +56,17 @@ def main():
     rospy.init_node("intent_handler_node")
     rospy.Subscriber("/intent_input", String, handle_intent)
     pub = rospy.Publisher("/intent_output", String, queue_size=10)
+
     rospy.loginfo("🧠 Intent handler running...")
+
+    # Wait a moment to let TTS node get ready
+    rospy.sleep(2.0)
+
+    # Friendly greeting on startup
+    greeting = "Hello, I am ready. May I help you?"
+    rospy.loginfo(f"Greeting: {greeting}")
+    pub.publish(greeting)
+
     rospy.spin()
 
 if __name__ == "__main__":

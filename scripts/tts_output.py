@@ -25,7 +25,7 @@ if __name__ == '__main__':
         tts_engine.setProperty('rate', 150)
         tts_engine.setProperty('volume', 1.0)
         rospy.loginfo("✅ TTS Engine initialized")
-        tts_engine.say("Text to speech node started")
+        tts_engine.say("Text to speech node started. The robot is hearing")
         tts_engine.runAndWait()
         tts_listener()
     except rospy.ROSInterruptException:

@@ -15,28 +15,18 @@ def callback(data):
 
 def tts_listener():
     rospy.init_node('tts_output_node', anonymous=True)
-
-    # Subscriber setup
     rospy.Subscriber('/intent_output', String, callback)
     rospy.loginfo("🔊 TTS node is active and listening on /intent_output")
-
-    # Optional: Uncomment to test fallback speech
-    # rospy.Timer(rospy.Duration(5), lambda event: speak_text("Waiting for intent message"), oneshot=True)
-
     rospy.spin()
 
 if __name__ == '__main__':
     try:
-        # Initialize TTS engine
         tts_engine = pyttsx3.init()
         tts_engine.setProperty('rate', 150)
         tts_engine.setProperty('volume', 1.0)
-
-        # Test speech at launch
         rospy.loginfo("✅ TTS Engine initialized")
         tts_engine.say("Text to speech node started")
         tts_engine.runAndWait()
-
         tts_listener()
     except rospy.ROSInterruptException:
         pass

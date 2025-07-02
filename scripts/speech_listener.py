@@ -6,8 +6,6 @@ import speech_recognition as sr
 
 pub = None
 
-offline_keywords = ["move", "stop", "left", "right", "forward", "back", "full speed", "half speed"]
-
 def recognize_google_speech():
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
@@ -33,7 +31,7 @@ def listener():
     global pub
     rospy.init_node('speech_listener_node', anonymous=True)
     pub = rospy.Publisher('/intent_input', String, queue_size=10)
-    rate = rospy.Rate(0.1)  # once every 10 seconds
+    rate = rospy.Rate(0.1)  # every 10 seconds
     while not rospy.is_shutdown():
         result = recognize_google_speech()
         handle_command(result)

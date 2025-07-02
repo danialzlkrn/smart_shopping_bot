@@ -1,0 +1,52 @@
+{
+  "person": {
+    "price": "N/A",
+    "type": "customer",
+    "location": "anywhere"
+  },
+  "bottle": {
+    "price": "2.99",
+    "type": "drink",
+    "location": "Aisle 3 - Beverage"
+  },
+  "apple": {
+    "price": "0.99",
+    "type": "fruit",
+    "location": "Aisle 1 - Produce"
+  },
+  "banana": {
+    "price": "0.69",
+    "type": "fruit",
+    "location": "Aisle 1 - Produce"
+  },
+  "book": {
+    "price": "7.99",
+    "type": "stationery",
+    "location": "Aisle 5 - Books"
+  },
+  "cell phone": {
+    "price": "499.00",
+    "type": "electronics",
+    "location": "Aisle 6 - Tech"
+  },
+  "laptop": {
+    "price": "899.00",
+    "type": "electronics",
+    "location": "Aisle 6 - Tech"
+  },
+  "cup": {
+    "price": "1.50",
+    "type": "kitchenware",
+    "location": "Aisle 4 - Home"
+  },
+  "chair": {
+    "price": "39.99",
+    "type": "furniture",
+    "location": "Aisle 7 - Furniture"
+  },
+  "backpack": {
+    "price": "24.99",
+    "type": "bag",
+    "location": "Aisle 2 - Accessories"
+  }
+}

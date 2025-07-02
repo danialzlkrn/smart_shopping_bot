@@ -1,0 +1,14 @@
+<launch>
+    <!-- Start YOLOv8 object detection node -->
+    <node pkg="smart_shopping_bot" type="object_camera_node.py" name="object_camera_node" output="screen" />
+
+    <!-- Start intent handler node -->
+    <node pkg="smart_shopping_bot" type="intent_handler.py" name="intent_handler_node" output="screen" />
+
+    <!-- Start speech listener (voice recognition) node -->
+    <node pkg="smart_shopping_bot" type="speech_listener.py" name="speech_listener_node" output="screen" />
+
+    <!-- Start text-to-speech output node -->
+    <node pkg="smart_shopping_bot" type="tts_output.py" name="tts_output_node" output="screen" />
+
+</launch>

@@ -1,0 +1,10 @@
+<launch>
+  <!-- Intent Handler Node -->
+  <node name="intent_handler" pkg="smart_shopping_bot" type="intent_handler.py" output="screen" />
+
+  <!-- Speech Listener Node (input) -->
+  <node name="speech_listener" pkg="smart_shopping_bot" type="speech_listener.py" output="screen" />
+
+  <!-- Text-to-Speech Output Node -->
+  <node name="tts_output" pkg="smart_shopping_bot" type="tts_output.py" output="screen" />
+</launch>

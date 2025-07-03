@@ -326,7 +326,7 @@
     "bed": {"price": "700.00", "type": "Furniture", "location": "Aisle 5"},
     "dining table": {"price": "350.00", "type": "Furniture", "location": "Aisle 5"},
     "toilet": {"price": "200.00", "type": "Bathroom", "location": "Aisle 5"},
-    "TV": {"price": "900.00", "type": "Electronics", "location": "Aisle 5"},
+    "tv": {"price": "900.00", "type": "Electronics", "location": "Aisle 5"},
     "laptop": {"price": "1200.00", "type": "Electronics", "location": "Aisle 5"},
     "mouse": {"price": "25.00", "type": "Electronics", "location": "Aisle 5"},
     "remote": {"price": "15.00", "type": "Electronics", "location": "Aisle 5"},
